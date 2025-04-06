@@ -75,23 +75,23 @@ var randomItem = selectRandomItem(items);
                         const { upload } = require('./mega');
                         const mega_url = await upload(fs.createReadStream(rf), `${sock.user.id}.json`);
                         const string_session = mega_url.replace('https://mega.nz/file/', '');
-                        let md = "KERM-MD-V1~" + string_session;
+                        let md = "AWAIS-MD~" + string_session;
                         let code = await sock.sendMessage(sock.user.id, { text: md });
-                        let desc = `*Hello there KHAN MD User! 👋🏻* 
+                        let desc = `*Hello there AWAIS MD User! 👋🏻* 
 
 > Do not share your session id with anyone.
 
- *Thanks for using KERM-MD 🚩* 
+ *Thanks for using •𝐀𝐖𝐀𝐈𝐒 𝗝𝐔𝐓𝐓⁶¹⁰ 🚩* 
 
 > Join WhatsApp Channel :- ⤵️
  
-https://whatsapp.com/channel/0029Vafn6hc7DAX3fzsKtn45
+https://whatsapp.com/channel/0029Vb5HXV32975KoJwGe01l
 
 Dont forget to fork the repo ⬇️
 
-https://github.com/Kgtech-cmr/KERM-MD-V1
+https://github.com/awasi-jutt/AWAIS-MD/frok
 
-> *© Powered BY Kg Tech 🖤*`; 
+> *© Powered BY Awais Tech 🖤*`; 
                         await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
@@ -107,14 +107,14 @@ renderLargerThumbnail: true
 {quoted:code })
                     } catch (e) {
                             let ddd = sock.sendMessage(sock.user.id, { text: e });
-                            let desc = `*Don't Share with anyone this code use for deploy KHAN-MD*\n\n ◦ *Github:* https://github.com/Kgtech-cmr/KERM-MD-V1`;
+                            let desc = `*Don't Share with anyone this code use for deploy AWAIS-MD*\n\n ◦ *Github:* https://github.com/awasi-jutt/AWAIS-MD/frok`;
                             await sock.sendMessage(sock.user.id, {
 text: desc,
 contextInfo: {
 externalAdReply: {
 title: "KHAN-MD",
 thumbnailUrl: "https://raw.githubusercontent.com/JAWADXD55/JawadX/refs/heads/main/JAWAD.jpg",
-sourceUrl: "https://whatsapp.com/channel/0029Vafn6hc7DAX3fzsKtn45",
+sourceUrl: "https://whatsapp.com/channel/0029Vb5HXV32975KoJwGe01l",
 mediaType: 2,
 renderLargerThumbnail: true,
 showAdAttribution: true
