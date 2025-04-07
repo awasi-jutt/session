@@ -65,7 +65,7 @@ router.get('/', async (req, res) => {
 ┃CONNECTED ✅🔥
 ┗━━━━━━━━━━━━━━━
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-❶ || Creator = 𖥘🕷️DARK/TECH🕸️𖥘
+❶ || Creator = 𖥘🕷️•𝐀𝐖𝐀𝐈𝐒 𝗝𝐔𝐓𝐓⁶¹⁰🕸️𖥘
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❷ || https://whatsapp.com/channel/0029VarDt9t30LKL1SoYXy26
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
@@ -75,7 +75,7 @@ router.get('/', async (req, res) => {
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 ❻ || YouTube = https://youtube.com/@javiel_dev?si=ToFC1idxek0hmzy3
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬
-©DEVELOPED BY DARK/TECH_
+©DEVELOPED BY •𝐀𝐖𝐀𝐈𝐒 𝗝𝐔𝐓𝐓⁶¹⁰_
 	
 _DONT FORGET TO FORK AND STAR MY REPO_`
 	 await Qr_Code_By_Wasi_Tech.sendMessage(Qr_Code_By_Wasi_Tech.user.id,{text:WASI_MD_TEXT},{quoted:session})
