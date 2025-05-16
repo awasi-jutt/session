@@ -38,4 +38,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Instagram: @um4rxd\nGitHub: @Um4r719\nServer running on http://localhost:${PORT}`);
 });
-module.export{giftedid};
+export default app;
