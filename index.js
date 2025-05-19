@@ -1,32 +1,43 @@
-{
-  "name": "webpair",
-  "version": "1.0.0",
-  "description": "WhatsApp bot session pairing and delivery system via web using Baileys",
-  "main": "index.js",
-  "type": "module",
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=9.7.2"
-  },
-  "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "stop": "echo 'No stop functionality (use Ctrl+C to stop)'",
-    "restart": "echo 'No restart functionality (use manual restart)'"
-  },
-  "author": "Umar Rehman (Um4r719)",
-  "license": "ISC",
-  "dependencies": {
-    "@whiskeysockets/baileys": "github:seiren-primrose/PL-Baileys",
-    "awesome-phonenumber": "^2.64.0",
-    "body-parser": "^1.20.2",
-    "express": "^4.18.3",
-    "megajs": "^1.1.0",
-    "phone": "^3.1.30",
-    "pino": "^8.17.0",
-    "qrcode": "^1.5.3"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
-}
+import express from 'express';
+import bodyParser from 'body-parser';
+import { fileURLToPath } from 'url';
+import path from 'path';
+import events from 'events';
+
+// Import the 'pair' module
+import code from './pair.js';
+
+const app = express();
+
+// Resolve the current directory path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const PORT = process.env.PORT || 8000;
+
+// Increase event emitter limit
+events.EventEmitter.defaultMaxListeners = 500;
+
+// Middleware
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Serve static files
+app.use(express.static(path.join(__dirname, 'public'))); // Move pair.html & home.html inside a "public" folder
+
+// Routes
+app.use('/code', code);
+app.get('/pair', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'pair.html'));
+});
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'home.html'));
+});
+
+// Start Server
+app.listen(PORT, () => {
+    console.log(`Instagram: @um4rxd\nGitHub: @Um4r719\nServer running on http://localhost:${PORT}`);
+});
+<script type='text/javascript' src='//pl26591898.profitableratecpm.com/30/c3/8a/30c38a753f4c55834e99e37df10cfead.js'></script>
+
+export default app;
